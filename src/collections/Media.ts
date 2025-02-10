@@ -6,11 +6,9 @@ export const Media: CollectionConfig = {
     read: () => true,
   },
   fields: [
-    {
-      name: 'alt',
-      type: 'text',
-      required: true,
-    },
   ],
-  upload: true,
+  upload: {
+      staticDir: 'media/video',
+      mimeTypes: ['video/x-msvideo', 'video/mp4', 'video/mpeg', 'video/ogg', 'video/mp2t', 'video/webm']
+  },
 }
