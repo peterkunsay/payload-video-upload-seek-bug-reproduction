@@ -12,7 +12,7 @@ const VideoHTMLConverter: Converter = {
             })) || undefined;
 
             return doc ? `<video controls width="100%">
-                <source src="${doc.url}" type="video/mp4">
+                <source src="${doc.url}" type="${doc.mimeType || "video/mp4"}">
                 Your browser does not support the video tag.
             </video>` : `[Video not found]`
         }
